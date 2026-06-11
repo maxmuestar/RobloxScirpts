@@ -69,3 +69,10 @@ local tool = ReplicatedStorage.Assets.Tools["Radio Active Coil"]:Clone()
 tool.Parent = player.Backpack
    end,
 })
+
+local Button = MainTab:CreateButton({
+   Name = "Open Item Giver (Only local)",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/maxmuestar/RobloxScirpts/refs/heads/main/ChaseTrainForBrainrots%20/itemgiver.lua"))()
+   end,
+})
