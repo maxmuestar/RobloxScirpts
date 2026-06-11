@@ -1,4 +1,3 @@
-
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
 
@@ -47,7 +46,7 @@ local MainSection = MainTab:CreateSection("Main")
 local Button = MainTab:CreateButton({
    Name = "tp to end",
    Callback = function()
-   rootPart.CFrame = CFrame.new(427.434479, 111.298767, -785.359009, -0.505694807, -8.3122238e-09, -0.862712443, 6.57395693e-09, 1, -1.34884344e-08, 0.862712443, -1.24924657e-08, -0.505694807)
+   rootPart.CFrame = CFrame.new(-169, 31, 3129)
    end,
 })
 
@@ -55,5 +54,18 @@ local Button = MainTab:CreateButton({
    Name = "tp to train",
    Callback = function()
    rootPart.CFrame = CFrame.new(5.97769451, 9.94454384, 118.347977, -0.025869254, 1.00549975e-07, 0.99966532, 3.08066568e-08, 1, -9.97864262e-08, -0.99966532, 2.82149468e-08, -0.025869254)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Give best coil",
+   Callback = function()
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer -- alleen in testmodus/Command Bar
+
+local tool = ReplicatedStorage.Assets.Tools["Radio Active Coil"]:Clone()
+tool.Parent = player.Backpack
    end,
 })
